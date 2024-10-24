@@ -9,9 +9,11 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/scripts.js"></script>
+    <script src="js/app.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
   </head>
@@ -81,7 +83,7 @@
     
     <div id="home-tiles" class="row">
     <div class="col-md-4 col-sm-6 col-xs-12">
-      <a onclick="openPdf();">
+      <a onclick="loadPDF('images/phoenix-menu.pdf');">
         <div id="menu-tile"><span>Menu</span></div>
       </a>
     </div>
@@ -103,6 +105,12 @@
   
   <div id="pdf-container">
    <iframe id="myFrame"> </iframe>
+    <canvas></canvas>
+     <div>
+    <button id="prev-page">Previous Page</button>
+    <button id="next-page">Next Page</button>
+    <span>Page: <span id="page-num"></span> / <span id="page-count"></span></span>
+  </div>
   </div>
 
   <footer class="panel-footer">
