@@ -83,7 +83,7 @@
     
     <div id="home-tiles" class="row">
     <div class="col-md-4 col-sm-6 col-xs-12">
-      <a onclick="loadPDF('images/phoenix-menu.pdf');">
+      <a onclick="openPdf();">
         <div id="menu-tile"><span>Menu</span></div>
       </a>
     </div>
@@ -105,12 +105,6 @@
   
   <div id="pdf-container">
    <iframe id="myFrame"> </iframe>
-    <canvas></canvas>
-     <div>
-    <button id="prev-page">Previous Page</button>
-    <button id="next-page">Next Page</button>
-    <span>Page: <span id="page-num"></span> / <span id="page-count"></span></span>
-  </div>
   </div>
 
   <footer class="panel-footer">
