@@ -12,8 +12,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
-    <script src="js/scripts.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/script.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
   </head>
@@ -47,15 +46,15 @@
            <ul id="nav-list" class="nav navbar-nav navbar-right">
             <li id="navHomeButton" class="visible-xs active">
               <a href="index.html">
-                <span class="glyphicon glyphicon-home"></span> Home</a>
+                <span class="glyphicon glyphicon-home"></span> Home </a>
             </li>
             <li id="navMenuButton">
-              <a onclick="openPdf();">
-                <span class="glyphicon glyphicon-cutlery"></span><br class="hidden-xs"> Menu</a>
+              <a href="#menu" onclick="toggleContent(event, 'menu');">
+                <span class="glyphicon glyphicon-cutlery"></span><br class="hidden-xs"> Menu </a>
             </li>
             <li>
               <a href="#">
-                <span class="glyphicon glyphicon-info-sign"></span><br class="hidden-xs"> About</a>
+                <span class="glyphicon glyphicon-info-sign"></span><br class="hidden-xs"> About </a>
             </li>
 
             <li id="phone" class="hidden-xs">
@@ -83,12 +82,12 @@
     
     <div id="home-tiles" class="row">
     <div class="col-md-4 col-sm-6 col-xs-12">
-      <a onclick="openPdf();">
+      <a href="#menu" onclick="toggleContent(event, 'menu');">
         <div id="menu-tile"><span>Menu</span></div>
       </a>
     </div>
     <div class="col-md-4 col-sm-6 col-xs-12">
-      <a onclick="openPdf1();">
+      <a href="#combo" onclick="toggleContent(event, 'combo');">
         <div id="specials-tile"><span>Phoenix Combos</span></div>
       </a>
     </div>
@@ -102,10 +101,41 @@
     </div>
     </div><!-- End of #home-tiles -->
   </div>
-  
-  <div id="pdf-container">
-   <iframe id="myFrame"> </iframe>
+  <p class="text">Click on the Desired Category to display Items List : </p>
+  <div id="menu" class="trigger" class="col-xs-4">
+      <a href="#image1" onclick="toggleImage(event, 'image1')">
+        <span>>>Biriyani & Fried Rice</span>
+      </a>
+
+      <a href="#image2" onclick="toggleImage(event, 'image2')">
+        <span>>>Starters</span>
+      </a>
+
+      <a href="#image3" onclick="toggleImage(event, 'image3')">
+        <span>>>Crunchies</span>
+      </a>
+
+      <a href="#image4" onclick="toggleImage(event, 'image4')">
+        <span>>>Deserts</span>
+      </a>
   </div>
+  
+  <div id="combo" class="trigger">
+    <a href="#image5" onclick="toggleImage(event, 'image5')">
+      <span>>>Crunchy Combo</span>
+    </a>
+  
+    <a href="#image6" onclick="toggleImage(event, 'image6')">
+      <span>>>Biriyani Combo</span>
+    </a>
+  </div>
+
+  <img id="image1" class="hiddenImage" src="images/biriyani.jpg" alt="Biriyani/FriedRice list">
+  <img id="image2" class="hiddenImage" src="images/starters.jpg" alt="Veg & Non-Veg Starters list">
+  <img id="image3" class="hiddenImage" src="images/crunchies.jpg" alt="Pizza/Burger/Sandwich list">
+  <img id="image4" class="hiddenImage" src="images/desserts.jpg" alt="Deserts list">
+  <img id="image5" class="hiddenImage" src="images/combo-1.jpg" alt="Crunchy combo list">
+  <img id="image6" class="hiddenImage" src="images/combo-2.jpg" alt="Biriyani Combo list">
 
   <footer class="panel-footer">
     <div class="container">
