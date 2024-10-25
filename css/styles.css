@@ -1,3 +1,7 @@
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   font-size: 16px;
   color: #fff;
@@ -119,7 +123,6 @@ body {
   box-shadow: 0 0 50px #3F0C1F;
   border: 2px solid #3F0C1F;
 }
-
 #menu-tile, #specials-tile, #map-tile {
   height: 250px;
   width: 100%;
@@ -150,6 +153,11 @@ body {
   background-color: #000;
   color: #fff;
   opacity: .8;
+}
+.text {
+  margin-left: 10px;
+  padding-left: 10px;
+  font-weight: bold;
 }
 /* END HOME PAGE */
 
@@ -228,20 +236,42 @@ h3.menu-item-title {
   font-style: italic;
 }
 
-#pdf-container {
-  display: block;
-} 
-#myFrame {
-  display: block;
-  margin: 0 auto;
-  width: 90vw;
-  height: 100vh;
-  max-width: 100%;
-  max-height: 100%;
-  border: 1px solid;
-  border-style: inset;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  display: none; /* Initially hidden */
+#menu, #combo {
+  margin: 10px;
+  padding: 0 20px; /* Add space between the two sections */
+}
+
+div.trigger {
+  display: none;
+}
+
+.trigger a {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  padding: 5px;
+  border: 2px solid #3F0C1F;
+  border-radius: 10px;
+  background-color: #222222;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.trigger a:hover {
+  box-shadow: 0 1px 5px 1px #cccccc;
+  text-decoration: none;
+}
+
+.hiddenImage {
+  display: none;
+  position: relative;
+  max-width: 90%; /* Responsive */
+  margin: 20px;
+  padding: 0 15px;
 }
 
 /* END SINGLE CATEGORY PAGE */
@@ -388,6 +418,3 @@ h3.menu-item-title {
     width: 100%;
   }
 }
-
-
-
